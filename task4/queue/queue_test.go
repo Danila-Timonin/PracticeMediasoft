@@ -62,8 +62,8 @@ func TestQueue(t *testing.T) {
 		q.Push(2)
 		q.Push(3)
 
-		q.Pop()   // 1
-		q.Push(4) // should wrap around
+		q.Pop()
+		q.Push(4)
 
 		if val := q.Pop(); val != 2 {
 			t.Errorf("Pop() = %d, expected 2", val)
@@ -80,7 +80,7 @@ func TestQueue(t *testing.T) {
 		q := NewQueue[int](2)
 		q.Push(1)
 		q.Push(2)
-		q.Push(3) // Should resize
+		q.Push(3)
 
 		if q.Size() != 3 {
 			t.Errorf("Size() after resize = %d, expected 3", q.Size())

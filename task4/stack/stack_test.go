@@ -58,7 +58,7 @@ func TestStack(t *testing.T) {
 		s := NewStack[int](2)
 		s.Push(1)
 		s.Push(2)
-		s.Push(3) // Should resize
+		s.Push(3)
 
 		if s.Size() != 3 {
 			t.Errorf("Size() after resize = %d, expected 3", s.Size())
